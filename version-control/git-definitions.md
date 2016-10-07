@@ -1,4 +1,5 @@
 # Git Definitions
+* completed by Claire Lindblom
 
 **Instructions: ** Define each of the following Git concepts.
 
