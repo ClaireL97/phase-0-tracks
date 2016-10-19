@@ -12,3 +12,7 @@
 .listfont{
 	font-size: .8em;
 }
+
+h1::first-letter{
+	color: #F7BA48
+}
