@@ -16,3 +16,7 @@
 h1::first-letter{
 	color: #F7BA48
 }
+
+section.job > h3{
+	color:red;
+}
