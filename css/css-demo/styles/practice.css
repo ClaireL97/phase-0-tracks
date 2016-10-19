@@ -4,5 +4,11 @@
 
 .job{
 	background-color: #e9e5dc;
-	border-radius:10px;
+	border-radius: 10px;
+	padding-top: .05px;
+	padding-left: 10px;
+	
+}
+.listfont{
+	font-size: .8em;
 }
