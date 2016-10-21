@@ -1,0 +1,23 @@
+#body{
+	margin-left: 46%;
+	margin-top: 90px;
+	position:absolute;
+	z-index: initial;
+	
+}
+
+#glasses{
+	margin-left: 48%;
+	margin-top: 190px;
+	position: absolute;
+	z-index: 2;
+
+}
+
+#hat{
+	margin-left: 46%;
+	position: absolute;
+	left:.5px;
+	z-index: 3;
+
+}
