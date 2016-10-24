@@ -1,0 +1,30 @@
+Elevator Algorithm
+When elevator use is needed.
+-Roll up the the elevator
+-Check Current floor number and store that value as current floor number
+-Ask master what floor number to go to.
+	- If valid floor, proceed to next step
+	- If invalid floor, ask again.
+	- If told current floor say "I am already on that floor"
+	- If told command "cancel that" stop asking and wait for new orders.
+-Save the ordered floor number as destination floor number
+-Using the destination floor number and the current floor number:
+	-If current floor number is less than destination floor number,press 	the up arrow
+	-If the current floor number is greater than the destination floor 	number, press the down arrow.
+
+- Roll into the elevator when the doors open and stop in front of the controrl buttons inside.
+
+-Locate the button that has the same value as stored destination floor number.
+
+-Press the button and sit tight for the ride
+-When the doors open roll out of the elevator
+-Delete current floor value
+	(could also make it keep a value stored for a long period of time 	instead of deleting it but decided to do it this way so that if my 	robot takes the stairs and is on a different current floor, it 	doesn't get mixed up.)
+-Delete stored destination floor number.
+-Report to master that elevator travel is complete
+
+Algorithm for Making my Bed
+-Get a clean sheet and pillow case and set them to the side
+-Remove pillow from bed and put it to the side next to the clean sheet and pillow case
+-Remove all sheets and blankets from bed so only matress remains and put them next to the clean sheets and pillow case.
+
