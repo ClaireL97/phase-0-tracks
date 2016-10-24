@@ -56,3 +56,12 @@ figcaption {
     width: %;
   }
 }
+
+table{
+  tr:nth-child(even) {background-color:gray;}
+
+}
+
+.headers{
+  letter-spacing:10px;
+}
