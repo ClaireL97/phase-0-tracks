@@ -24,7 +24,15 @@ When elevator use is needed.
 -Report to master that elevator travel is complete
 
 Algorithm for Making my Bed
+(this is counting on a sheet being easy to access and find)
 -Get a clean sheet and pillow case and set them to the side
 -Remove pillow from bed and put it to the side next to the clean sheet and pillow case
 -Remove all sheets and blankets from bed so only matress remains and put them next to the clean sheets and pillow case.
+-take clean sheet and lay it on the bed.
+-tuck the corners of the sheet around each of the corners.
+-take the comforter and put it back on the bed spread out over it flat.
+-Put the other blankets back on to the bed and spread them out on top of the comforter.
+-Pick the pillow and remove the old pillow case
+-Slide the pillow inside of the new pillow case and place it at the head of the bed.
+-Take the dirty sheets and pillow case and throw them into a laundry basket.
 
