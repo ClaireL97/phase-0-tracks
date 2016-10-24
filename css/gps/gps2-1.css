@@ -1,0 +1,35 @@
+header{
+  background-color:red;
+  position: static;
+  font-style:italic;
+}
+header:hover{ 
+color: #3399ff;
+}
+.column-1{
+  display:inline-block;
+  background-color:orange;
+  font-style:bold;
+  vertical-align:top;
+  width:45%;
+  font-family:Helvetica;
+  color: #8A2BE2
+}
+
+.column-2{
+  display:inline-block;
+  background-color:yellow;
+  font-style: oblique;
+  vertical-align:top;
+  padding-bottom:37px;
+  font-family:Helvetica;
+  color: #8FBC8F
+}
+
+footer{
+  background-color:green;
+  font-style:italic;
+  display:inline-block;
+  vertical-align:bottom;
+  
+}
