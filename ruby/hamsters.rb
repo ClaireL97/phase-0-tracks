@@ -11,14 +11,14 @@ fur_color = gets.chomp
 #p fur_color
 
 
-#puts "How old is this hamster?"
-#age = gets.to_i
-#if age = 
-	#puts "unknown"
-#else 
-	#age = gets.to_i
-#end
-#p age
+puts "How old is this hamster?"
+age = gets.chomp
+if age ==""
+	years = nil
+else 
+	years = age
+end
+#p years
 
 puts "Is this hamster a good candidate for adoption? Yes or No?"
 candidate = gets.chomp
@@ -29,4 +29,5 @@ elsif candidate == "No"
 	ready = "Needs more time in sanctuary"
 end
 
-p "This hamsters name is #{hamster_name}. On a scale of one to 10 they are a #{volume_level}. #{hamster_name} is #{fur_color} and  years old. #{ready}."
+p "This hamsters name is #{hamster_name}. On a scale of one to 10 they are a #{volume_level}. #{hamster_name} is #{fur_color} and #{years
+} years old. #{ready}."
