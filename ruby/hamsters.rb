@@ -12,4 +12,8 @@ p fur_color
 
 puts "Is this hamster a good candidate for adoption? Yes or No?"
 candidate = gets.chomp
-p candidate
+#p candidate
+
+puts "How old is this hamster?"
+age = gets.chomp
+#p age
