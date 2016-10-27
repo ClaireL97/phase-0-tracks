@@ -12,3 +12,15 @@ bread_pref = gets.chomp
 
 puts "Would you like to enroll in the company's health insurance? Yes or No?"
 insurance = gets.chomp
+
+
+
+
+
+
+
+
+
+
+
+puts "Actually, never mind! What do these questions have to do with anything? Lets be friends."
