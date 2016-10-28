@@ -63,14 +63,17 @@ else
 	puts "Results inconclusive"	
 end
 
-stop_word = done
+stop_word = "done"
 
+while alergies != stop_word
+	puts "What are your alergies? When you have listed them all type done"
+	alergies = gets.chomp
+end
 
-
-
-
-
-
-
+if alergies == "sunshine"
+	puts "definitely a vampire"
+else
+	puts "Probably not a vampire"
+end
 
 puts "Actually, never mind! What do these questions have to do with anything? Lets be friends."
