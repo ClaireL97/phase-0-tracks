@@ -26,9 +26,9 @@ current_year = 2016
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you? Yes or No?"
 bread_pref = gets.chomp
-if bread_pref=="Yes"
+if bread_pref == "Yes"
 	garlic = true
-elsif bread_pref=="No"
+elsif bread_pref == "No"
 	garlic = false
 end
 
@@ -37,6 +37,12 @@ p garlic
 puts "Would you like to enroll in the company's health insurance? Yes or No?"
 h_insurance = gets.chomp
 
+if h_insurance == "Yes"
+	insurance = true
+elsif h_insurance == "No"
+	insurance = false
+end
+	
 
 
 #if correct_age && (garlic||insurance)
