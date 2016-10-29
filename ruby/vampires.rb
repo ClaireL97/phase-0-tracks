@@ -62,18 +62,22 @@ elsif name == "Tu Fang"
 else
 	puts "Results inconclusive"	
 end
-
+puts "What are your allergies? When you have listed them all type done"
 stop_word = "done"
+allergies = gets.chomp
+while allergies != stop_word
 
-while alergies != stop_word
-	puts "What are your alergies? When you have listed them all type done"
-	alergies = gets.chomp
+	if allergies == "sunshine"
+		puts "definitely a vampire"
+		allergies = "done"
+	elsif allergies != stop_word
+		puts "What are your allergies? When you have listed them all type done"
+		allergies = gets.chomp
+	else
+		#for some reason this is not printing at the end of the file even when the logic ends up being correct
+		puts "Probably not a vampire"
+	end
 end
 
-if alergies == "sunshine"
-	puts "definitely a vampire"
-else
-	puts "Probably not a vampire"
-end
 
 puts "Actually, never mind! What do these questions have to do with anything? Lets be friends."
