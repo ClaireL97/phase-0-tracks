@@ -43,27 +43,27 @@ until employee_number == 0
 	elsif h_insurance == "No"
 		insurance = false
 	end
-
 	#p insurance
 
-	#Ask jeremy about this one
-	if correct_age && (garlic||insurance)
-		puts "probably not a vampire"
-
-	elsif !correct_age && (!garlic||!insurance)
-		puts "Might be a vampire"
-	elsif !correct_age && (!garlic && !insurance)
-		puts "Almost certainly a vampire"
-
-	elsif name == "Drake Cula"
+	if name == "Drake Cula"
 		puts "Definitely a vampire"
 
 	elsif name == "Tu Fang"
 		puts "Definitely a vampire"
+
+	elsif correct_age && (garlic||insurance)
+		puts "probably not a vampire"
+
+	elsif !correct_age && (!garlic && !insurance)
+		puts "Almost certainly a vampire"
+
+	elsif !correct_age && (!garlic||!insurance)
+		puts "Might be a vampire"
+
 	else
 		puts "Results inconclusive"	
 	end
-	
+
 	puts "What are your allergies? When you have listed them all type done"
 	stop_word = "done"
 	allergies = gets.chomp
@@ -75,13 +75,16 @@ until employee_number == 0
 		elsif allergies != stop_word
 			puts "What are your allergies? When you have listed them all type done"
 			allergies = gets.chomp
-		else
-			#for some reason this is not printing at the end of the file even when the logic ends up being correct
-			puts "Probably not a vampire"
+			if allergies == "done"
+
+				#for some reason this is not printing at the end of the file even when the logic ends up being correct
+				puts "Probably not a vampire"
+			end
 		end
+		
 	end
 employee_number -= 1
 end
 
 
-	puts "Actually, never mind! What do these questions have to do with anything? Lets be friends."
+puts "Actually, never mind! What do these questions have to do with anything? Lets be friends."
