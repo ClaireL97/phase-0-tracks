@@ -12,6 +12,10 @@ until employee_number == 0
 
 	current_year = 2016
 	#p current_year
+	if year >= current_year
+		puts "you are either a baby or a future person -.-"
+	end
+
 
 	year_diff = current_year-year
 	#p year_diff 
