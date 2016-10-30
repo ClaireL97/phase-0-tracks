@@ -1,6 +1,6 @@
 puts "How many employees will be processed?"
 employee_number = gets.to_i
-
+until employee_number == 0
 	puts "What is your name?"
 	name = gets.chomp
 	#p name
@@ -60,11 +60,10 @@ employee_number = gets.to_i
 
 	elsif name == "Tu Fang"
 		puts "Definitely a vampire"
-		
-
 	else
 		puts "Results inconclusive"	
 	end
+	
 	puts "What are your allergies? When you have listed them all type done"
 	stop_word = "done"
 	allergies = gets.chomp
@@ -81,6 +80,8 @@ employee_number = gets.to_i
 			puts "Probably not a vampire"
 		end
 	end
+employee_number -= 1
+end
 
 
 	puts "Actually, never mind! What do these questions have to do with anything? Lets be friends."
