@@ -10,7 +10,7 @@
 puts "zom".insert(2, 'o')
 # => “zoom”
 
-# "enhance".<???>
+puts "enhance".center(20)
 # => "    enhance    "
 
 puts "Stop! You’re under arrest!".upcase
@@ -25,7 +25,7 @@ puts "Stop! You’re under arrest!".upcase
 puts "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+# "The mystery of the missing first letter".slice(0)
 # => "he mystery of the missing first letter"
 
 # "Elementary,    my   dear        Watson!".<???>
