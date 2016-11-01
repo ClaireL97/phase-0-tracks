@@ -7,7 +7,7 @@
 # "iNvEsTiGaTiOn".<???>
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+puts "zom".insert(2, 'o')
 # => “zoom”
 
 # "enhance".<???>
