@@ -25,15 +25,16 @@ puts " suspects".insert(0, 'the usual')
 puts "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".slice(0)
+# "The mystery of the missing first letter"
 # => "he mystery of the missing first letter"
 
 # "Elementary,    my   dear        Watson!".<???>
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+puts "z".getbyte(0)
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+# 122 is the alt code number for lowercase z
 
 puts "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
