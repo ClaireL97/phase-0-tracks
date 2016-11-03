@@ -18,13 +18,46 @@ def search_array(array,int)
 	return nil
 end
 
-
-p search_array(arr,90)
+#p search_array(arr,23)
 #p search_array(arr,24)
 
-#takes the array
-#sets index to 0
-#gets array length
+#take term number that we pass through as intergerr
+#create an array with that amount of items in it.
+#add the first 2 items in fibnum array to create third item.
+# add index plus second index
+
+
+
+
+
+
+def fib(term_num)
+	number = 0
+	fib_num = [0,1]
+	until number == term_num-2
+		sum = fib_num[number]+fib_num[number+1]
+		fib_num.push (sum)
+		number += 1
+	end
+	return fib_num
+end
+
+p fib(6)
+p fib(100)
+
+#this last variable is the number that was said that 100 would equal
+last = 218922995834555169026
+
+#checker to see if the value is true without doing it manually
+if fib(100).last == last
+	puts true
+else 
+	puts false
+end
+
+
+
+
 
 
 
