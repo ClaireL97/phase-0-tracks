@@ -4,7 +4,7 @@
 #If it doesn't match anything put nil
 
 arr = [42, 89, 23, 1]
-#p arr
+p arr
 
 
 def search_array(array,int)
@@ -18,8 +18,8 @@ def search_array(array,int)
 	return nil
 end
 
-#p search_array(arr,23)
-#p search_array(arr,24)
+p search_array(arr,23)
+p search_array(arr,24)
 
 #take term number that we pass through as intergerr
 #create an array with that amount of items in it.
@@ -43,7 +43,7 @@ def fib(term_num)
 end
 
 p fib(6)
-p fib(100)
+p fib(100).last
 
 #this last variable is the number that was said that 100 would equal
 last = 218922995834555169026
@@ -55,7 +55,33 @@ else
 	puts false
 end
 
+#create intital array
+#crerate an empty final array
+#chose a pivot value for final array
 
+
+
+def insertion_sort(array)
+    final = [array[0]]
+    array.delete_at(0)
+  
+    for i in array
+        final_index = 0
+        while final_index < final.length
+            if i <= final[final_index]
+                final.insert(final_index,i)
+                break
+            elsif final_index == final.length-1
+                final.insert(final_index+1,i)
+                break
+            end
+            final_index+=1
+        end
+    end
+
+    return final
+end
+p insertion_sort(arr)
 
 
 
