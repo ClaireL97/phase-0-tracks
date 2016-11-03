@@ -62,6 +62,7 @@ end
 #loop it so that each time it compares if each number in array is greater or less.
 #If greater put to the right of value or do nothing.
 #If less put to the left in the array.
+#make sure to return the final.
 
 
 
