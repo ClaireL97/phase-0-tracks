@@ -32,6 +32,7 @@ Classroom = {
     }
 }
 
+p Classroom
 #Mirror's are not allowed in desks so taking mirror away from female desks.
  Classroom[:desk_1][:supplies].delete ("Compact Mirror")
  #Printed the desk one now that compact mirro was removed
@@ -39,4 +40,9 @@ Classroom = {
 
  #The male student desk is missing colored pencils and needs them for art projects.
 Classroom[:desk_2][:supplies].push ("Colored Pencils")
-p Classroom[:desk_2] 
+p Classroom[:desk_2]
+
+#the supplies in the staff desk need to be reversed
+Classroom[:staff_desk][:supplies].reverse
+p Classroom[:staff_desk]
+
