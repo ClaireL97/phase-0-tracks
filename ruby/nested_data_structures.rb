@@ -33,3 +33,6 @@ Classroom = {
 }
 
 #Mirror's are not allowed in desks so taking mirror away from female desks.
+ Classroom[:desk_1][:supplies].delete ("Compact Mirror")
+ #Printed the desk one now that compact mirro was removed
+ p Classroom[:desk_1]
