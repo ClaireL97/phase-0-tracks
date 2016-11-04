@@ -36,3 +36,7 @@ Classroom = {
  Classroom[:desk_1][:supplies].delete ("Compact Mirror")
  #Printed the desk one now that compact mirro was removed
  p Classroom[:desk_1]
+
+ #The male student desk is missing colored pencils and needs them for art projects.
+Classroom[:desk_2][:supplies].push ("Colored Pencils")
+p Classroom[:desk_2] 
