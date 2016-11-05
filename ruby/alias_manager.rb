@@ -15,15 +15,33 @@ flipped_name
 end
 
 
-
-def letter_changer(swapped_name)
-	character_split = swapped_name.split('')
-	next_character = character_split.map!{|character_split|character_split.next}
-	character_split
-
+def letter_progressor(swapped_name)
+	split = swapped_name.split('')
+	code_name = ""
+	split.each do |letter|
+	 	if letter == " "
+	 		code_name += " "
+	 	elsif letter.downcase == "a"
+	 		code_name += "e"
+	 	elsif letter.downcase == "e"
+	 		code_name += "i"
+	 	elsif letter.downcase == "i"
+	 		code_name +="o"
+	 	elsif letter.downcase == "o"
+	 		code_name += "u"
+	 	elsif letter.downcase == "u"
+	 		code_name += "a"
+	 	elsif letter.downcase == "z"
+	 		code_name += "a"
+	 	else 
+			code_name += letter.next
+	 	end	
+	 end
+	 code_name
 end
 
-p letter_changer("Jelly Fish")
+
+
 
 
 
