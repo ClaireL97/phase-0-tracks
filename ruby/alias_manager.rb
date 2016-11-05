@@ -15,7 +15,7 @@ flipped_name
 end
 
 
-def letter_progressor(swapped_name)
+def letter_swapper(swapped_name)
 	split = swapped_name.split('')
 	code_name = ""
 	split.each do |letter|
@@ -49,9 +49,10 @@ end
 puts "Type the name you want to process. When you are done type quit."
 name = gets.chomp
 until name == "quit"
-	p name_flipper(name)
+	p letter_swapper(name_flipper(name))
 	puts "Type the name you want to process. When you are done type quit."
 	name = gets.chomp
+
 
 end
 
