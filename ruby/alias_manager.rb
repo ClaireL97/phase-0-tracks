@@ -60,5 +60,5 @@ until name == "quit"
 	name = gets.chomp
 
 end
-p saved_names
+saved_names.each{|key,value|puts "#{key} is #{value}"}
 
