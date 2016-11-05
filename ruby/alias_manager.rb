@@ -14,7 +14,15 @@ flipped_name = split_name.reverse.join(' ')
 end
 
 
+
 puts "Type the name you want to process. When you are done type quit."
+name = gets.chomp
+until name == "quit"
+	p name_flipper(name)
+	puts "Type the name you want to process. When you are done type quit."
+	name = gets.chomp
+
+end
 
 
 
