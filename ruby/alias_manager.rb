@@ -11,7 +11,20 @@ split_name = name.split(' ')
 #p split_name
 flipped_name = split_name.reverse.join(' ')
 #p flipped_name
+flipped_name
 end
+
+
+
+def letter_changer(swapped_name)
+	character_split = swapped_name.split('')
+	next_character = character_split.map!{|character_split|character_split.next}
+	character_split
+
+end
+
+p letter_changer("Jelly Fish")
+
 
 
 
