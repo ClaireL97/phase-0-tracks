@@ -17,6 +17,7 @@ end
 
 def letter_swapper(swapped_name)
 	split = swapped_name.split('')
+	vowels =["a","e","i","o","u"]
 	code_name = ""
 	split.each do |letter|
 	 	if letter == " "
@@ -33,13 +34,16 @@ def letter_swapper(swapped_name)
 	 		code_name += "a"
 	 	elsif letter.downcase == "z"
 	 		code_name += "a"
-	 	else 
-			code_name += letter.next
+	 	else
+	 		letter = letter.downcase.next
+	 		if vowels.include?letter
+				letter = letter.next
+			end
+			code_name += letter
 	 	end	
 	 end
 	 code_name
 end
-
 
 
 
