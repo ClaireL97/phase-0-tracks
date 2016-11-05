@@ -54,10 +54,10 @@ name = gets.chomp
 saved_names = {}
 until name == "quit"
 	code_name = letter_swapper(name_flipper(name))
-	p code_name
+	p code_name	
+	saved_names[name] = code_name
 	puts "Type the name you want to process. When you are done type quit."
 	name = gets.chomp
-	saved_names[name] = code_name
 
 end
 p saved_names
