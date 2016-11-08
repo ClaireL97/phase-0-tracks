@@ -54,11 +54,17 @@ def list_adder(list,newitem,quantity)
 	list
 end
 
-p list_adder(list,"socks",2)
+#p list_adder(list,"socks",2)
 
 def list_deleter(list,item_del)
 	list.delete(item_del)
 	list
 end
 
-p list_deleter(list,"carrots")
+#p list_deleter(list,"carrots")
+
+def quantity_changer(list,exist_name,new_quant)
+	list[exist_name] = new_quant
+	list
+end
+p quantity_changer(list,"apples",3)
