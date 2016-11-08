@@ -75,3 +75,29 @@ end
 #list_printer(list)
 #I am going to refactor this one in order to make the print method run.
 list_printer(list_adder(list,"socks",2))
+
+#Reflection
+#What did you learn about pseudocode from working on this challenge?
+	#I learned pseudocode can be short and simple. I learned that I didn't need to go so in depth on some things and plan it out so 
+	# much as put the general idea of what needs to happen to get from point A to point B
+
+#What are the tradeoffs of using arrays and hashes for this challenge?
+	#I ended up using a hash for this challenge because it let me call the quantity and the item together. An array would let me just add the items
+	#faster to the final list but it wouldn't give me the quantities. Hashes work better.
+
+#What does a method return?
+	#The method returns the last item that is called at the end of the method. In the list printer method, it will return list. That is why it can print
+	# list later
+
+#What kind of things can you pass into methods as arguments?
+	#I can pass anything that has a value assigned to it as long as the method that runs supprots the input.
+	#I can put a variable that represents a hash and it uses the hash when that argument is used in the method. That is just an example.
+
+
+#How can you pass information between methods?
+	#I can pass information between methods by setting the methods result as a variable outside of said method. Then that method can be called upon inside another method by putting
+	#it in the argument section of the method. An example of this in the code I wrote was list.
+
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+	#Using the different methods to access the results of other methods was solidified and pseudocode was clarified. While the concept isn't confusing
+	#I still think I need to work on pseudocoding to make it less complicated.
