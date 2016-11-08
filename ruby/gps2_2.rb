@@ -37,3 +37,22 @@
 	#iterate through the program and run a print statement for the hash calling the key and value and putting it into a string
 
 # output: existing list in readable form saying how many of each item to get
+
+
+def list_creation(items_string)
+	shopping_list = {}
+	intit_list = items_string.split(' ')
+	intit_list.each do|item|
+		shopping_list[item] = 1
+	end
+	shopping_list
+end
+
+list = list_creation("cereal pizza apples carrots")
+
+def list_adder(list,newitem,quantity)
+	list[newitem] = quantity
+	list
+end
+
+p list_adder(list,"socks",2)
