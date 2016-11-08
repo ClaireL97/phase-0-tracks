@@ -15,7 +15,6 @@
 # steps:
 	# take the item name and add to existing hash as new key
 	# take optional quantity and add it as the value to the new key
-
 # output: the existing list with added key and value as the last thing on list.
 
 # Method to remove an item from the list
@@ -56,3 +55,10 @@ def list_adder(list,newitem,quantity)
 end
 
 p list_adder(list,"socks",2)
+
+def list_deleter(list,item_del)
+	list.delete(item_del)
+	list
+end
+
+p list_deleter(list,"carrots")
