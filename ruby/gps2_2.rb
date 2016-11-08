@@ -67,4 +67,11 @@ def quantity_changer(list,exist_name,new_quant)
 	list[exist_name] = new_quant
 	list
 end
-p quantity_changer(list,"apples",3)
+#p quantity_changer(list,"apples",3)
+
+def list_printer(list)
+	list.each{|key,value|puts "I want #{value} of #{key}"}
+	list
+end
+
+list_printer(list)
