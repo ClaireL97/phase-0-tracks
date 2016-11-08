@@ -54,7 +54,6 @@ def list_adder(list,newitem,quantity)
 	list
 end
 
-#p list_adder(list,"socks",2)
 
 def list_deleter(list,item_del)
 	list.delete(item_del)
@@ -73,5 +72,6 @@ def list_printer(list)
 	list.each{|key,value|puts "I want #{value} of #{key}"}
 	list
 end
-
-list_printer(list)
+#list_printer(list)
+#I am going to refactor this one in order to make the print method run.
+list_printer(list_adder(list,"socks",2))
