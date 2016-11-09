@@ -30,6 +30,14 @@ class Santa
 
 	end
 
+	#getter methods
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
 
 
 	
