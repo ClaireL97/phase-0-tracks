@@ -1,4 +1,6 @@
 class Santa
+	attr_reader :ethnicity
+	attr_accessor :gender
 
 	def initialize (gender, ethnicity)
 		puts "Initializing Santa instance..."
@@ -30,23 +32,25 @@ class Santa
 
 	end
 
-	#getter methods
+	#getter method
 	def age
 		@age
 	end
+	#commenting these out for refactor
 
-	def ethnicity
-		@ethnicity
-	end
+	#def ethnicity
+	#	@ethnicity
+	#end
 
-	def gender
-		@gender
-	end
+	#def gender
+	#	@gender
+	#end
 
 	#setter method
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+	#commenting this out for refactor
+	#def gender=(new_gender)
+	#	@gender = new_gender
+	#end
 
 
 	
@@ -55,16 +59,17 @@ end
 #Driver Code
 santa = Santa.new("Male","white")
 santa.speak
+santa.eat_milk_and_cookies("White Chocolate Chip")
 
 #this code tests the setter method setting santa gender to lowercase male
 santa.gender = "male"
 p santa.gender
 p santa.ethnicity
+santa.celebrate_birthday
+santa.get_mad_at("Dasher")
 
-=begin
+
+
 white_female_santa = Santa.new("female","white")
 white_female_santa.speak
 white_female_santa.eat_milk_and_cookies("Chocolate Chip")
-=end
-santa.celebrate_birthday
-santa.get_mad_at("Dasher")
