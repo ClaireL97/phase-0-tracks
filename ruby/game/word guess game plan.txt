@@ -9,3 +9,24 @@ Word Guessing Game Pseudocode
 -If they get it congradulate them
 -If they fail, taunt message
 
+for the classs
+# Initialize Method
+	-sets guess limit for everythinig
+	-takes user input for word to guess
+	-create a guess array
+# Blank space template
+	-Get the length of word and print blank underscores
+		_ _ _ _ _ _(example)
+	
+#Guess template
+	- Take user input for guess
+	- Check if it matches anything in the character array
+		If it does replace the same index in the blank array
+	- check if it matches the word
+		if it does replace the blank array
+	- if it is not any print wrong
+	- save guesses in a guess array
+	-If any of the guesses match sometihnig in the guess array tell user 	it is a repeat
+	- subtract one from the guess limit
+
+Remember to downcase everything or upcase it all so that everything is uniform (use upcase)
