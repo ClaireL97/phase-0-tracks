@@ -1,0 +1,11 @@
+Word Guessing Game Pseudocode
+
+-General Things that needs to happen-
+-Ask the user for a word
+-Have user enter a word
+-Store word as a variable
+-Ask for user input to guess letters or words
+-Count down number of guesses that a user gets to have(set guess limit to 20)
+-If they get it congradulate them
+-If they fail, taunt message
+
