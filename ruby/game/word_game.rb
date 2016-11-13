@@ -73,8 +73,6 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters, :guess_limi
 			puts "You have #{@guess_limit} guesses left"		
 
 		end
-
-
 	end
 end
 #Things to do
