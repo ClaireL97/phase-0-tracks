@@ -18,7 +18,7 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters
 				index +=1
 			@letter_index[index] = value
 		end
-		p @letter_index
+		@letter_index
 	end
 
 	def answer_box
@@ -35,40 +35,47 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters
 		user_guess = guess.upcase
 		if @Guess_list.include?user_guess
 			puts "You have already guessed that"
+			puts "You have #{@guess_limit} guesses left"
 
 		elsif user_guess.upcase == @Word
 			puts "Nice job, the word was #{@Word}! You Win!"
-
+			guess_limit = 0
+			
+		
 		elsif @word_characters.include?user_guess
 			@Guess_list.push(user_guess)
 			character_index = @word_characters.index(user_guess)
 			p character_index
 			@Answer[character_index] = user_guess
 			p @Answer
-			p @Guess_list
 			@guess_limit -= 1
-			puts "You have #{@guess_limit} guesses left"
+			puts "You have #{@guess_limit} guesses left. Guess Again"
 
 		elsif !@word_characters.include?user_guess
 			puts "That is not in the word"
 			@Guess_list.push(user_guess)
 			p @Answer
-			p @Guess_list
+			#p @Guess_list
 			@guess_limit -= 1
 			puts "You have #{@guess_limit} guesses left"		
+
 		end
+
+
 	end
 end
 #Things to do
 		#Make program find all the index's for example in letter 2 t's and right now program only takes first one
-		#make it print answers for when answer is reached
 #game = Word_Game.new("Shelter")
  # game.guess_checker("SHELTER")
  # game.guess_checker("s")
  # game.guess_checker("t")
  # game.guess_checker("s")
 
-puts "Lets begin the game. What word would you like to scrable?"
-game = Word_Game.new(gets.chomp)
-game.answer_box
-game.index_storage
+# puts "Lets begin the game. What word would you like to scrable?"
+# game = Word_Game.new(gets.chomp)
+# game.answer_box
+# game.index_storage
+# puts "Now then time to start guessing. Guess a letter or the word!"
+
+# game.guess_checker(gets.chomp)
