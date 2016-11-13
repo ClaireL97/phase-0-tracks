@@ -24,6 +24,9 @@ class Word_Game
 
 	def guess_checker(guess)
 		user_guess = guess.upcase
+		if @Guess_list.include?user_guess
+			puts "You have already guessed that"
+		end
 
 		if @word_characters.include?user_guess
 			@Guess_list.push(user_guess)
@@ -31,6 +34,15 @@ class Word_Game
 			@Answer[character_index] = user_guess
 			p @Answer
 			p @Guess_list
+			@guess_limit -= 1
+
+		elsif !@word_characters.include?user_guess
+			puts "That is not in the word"
+			@Guess_list.push(user_guess)
+			p @Answer
+			p @Guess_list
+			@guess_limit -= 1
+			
 		end
 
 
@@ -42,4 +54,4 @@ end
 
 game = Word_Game.new("Shelter")
 game.answer_box
-game.guess_checker("t")
+game.guess_checker("y")
