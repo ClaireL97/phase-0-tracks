@@ -9,6 +9,16 @@ class Word_Game
 		@guess_limit = @Word.length
 	end
 
+	def index_storage
+		index = 0
+		until index == @Word.length
+			value = @word_characters[index]
+				@word_index[index] = value
+			index +=1
+		end
+		p @word_index
+	end
+
 	def get_Guess_list
 		p @Guess_list
 		@Guess_list
@@ -34,30 +44,30 @@ class Word_Game
 
 		elsif @word_characters.include?user_guess
 			@Guess_list.push(user_guess)
-			character_index = @word_characters.index(user_guess)
+			character_index = @index_storage(user_guess)
 			p character_index
 			@Answer[character_index] = user_guess
 			p @Answer
 			p @Guess_list
 			@guess_limit -= 1
+			puts "You have #{@guess_limit} guesses left"
 
 		elsif !@word_characters.include?user_guess
 			puts "That is not in the word"
 			@Guess_list.push(user_guess)
 			p @Answer
 			p @Guess_list
-			@guess_limit -= 1		
+			@guess_limit -= 1
+			puts "You have #{@guess_limit} guesses left"		
 		end
 	end
-
-
-
 end
 #Things to do
 		#Make program find all the index's for example in letter 2 t's and right now program only takes first one
 		#make it print answers for when answer is reached
 game = Word_Game.new("Shelter")
 game.answer_box
+game.index_storage
 game.guess_checker("SHELTER")
 game.guess_checker("s")
 game.guess_checker("t")
