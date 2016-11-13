@@ -26,9 +26,8 @@ class Word_Game
 		user_guess = guess.upcase
 		if @Guess_list.include?user_guess
 			puts "You have already guessed that"
-		end
 
-		if @word_characters.include?user_guess
+		elsif @word_characters.include?user_guess
 			@Guess_list.push(user_guess)
 			character_index = @word_characters.index(user_guess)
 			@Answer[character_index] = user_guess
@@ -45,6 +44,9 @@ class Word_Game
 			
 		end
 
+	#Things to do
+		#Make program find all the index's for example in letter 2 t's and right now program only takes first one
+		#make it print answers for when answer is reached
 
 	end
 
@@ -55,3 +57,5 @@ end
 game = Word_Game.new("Shelter")
 game.answer_box
 game.guess_checker("y")
+game.guess_checker("t")
+game.guess_checker("s")
