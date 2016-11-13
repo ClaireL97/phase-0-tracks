@@ -10,6 +10,7 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters, :guess_limi
 		@Answer = []
 		@victory = false
 		@guess_limit = @Word.length
+		answer_box
 	end
 =begin 
 	def index_storage
@@ -39,7 +40,7 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters, :guess_limi
 			puts "You have #{@guess_limit} guesses left"
 
 		elsif user_guess.upcase == @Word
-			puts "Nice job, the word was #{@Word}! You Win!"
+			@Answer = @Word
 			@victory = true
 			@guess_limit = 0
 		
@@ -70,8 +71,7 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters, :guess_limi
 			p @Answer
 			p @Guess_list
 			@guess_limit -= 1
-			puts "You have #{@guess_limit} guesses left"		
-
+			p "You have #{@guess_limit} guesses left"
 		end
 	end
 end
@@ -88,17 +88,19 @@ end
 #   game.guess_checker("h")
 #   game.guess_checker("l")
 
-puts "Lets begin the game. What word would you like to have guessed?"
-game = Word_Game.new(gets.chomp)
-  game.answer_box
+#User Interface
 
- until game.guess_limit == 0
- 	puts "Now then time to start guessing. Guess a letter or the word!"
-	game.guess_checker(gets.chomp)
- end
-p game.victory
-if game.victory == false
-	puts "And you FAIIIL -.- The word was #{game.Word}"
-else
-	puts "YAY! You guessed #{game.Word} correctly! ^.^"
-end
+# puts "Lets begin the game. What word would you like to have guessed?"
+# game = Word_Game.new(gets.chomp)
+#   game.answer_box
+
+#  until game.guess_limit == 0
+#  	puts "Now then time to start guessing. Guess a letter or the word!"
+# 	game.guess_checker(gets.chomp)
+#  end
+# p game.victory
+# if game.victory == false
+# 	puts "And you FAIIIL -.- The word was #{game.Word}"
+# else
+# 	puts "YAY! You guessed #{game.Word} correctly! ^.^"
+# end
