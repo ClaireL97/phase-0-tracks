@@ -22,6 +22,24 @@ class Word_Game
 		p @Answer
 	end
 
+	def guess_checker(guess)
+		user_guess = guess.upcase
+
+		if @word_characters.include?user_guess
+			@Guess_list.push(user_guess)
+			character_index = @word_characters.index(user_guess)
+			@Answer[character_index] = user_guess
+			p @Answer
+			p @Guess_list
+		end
+
+
+	end
+
 
 
 end
+
+game = Word_Game.new("Shelter")
+game.answer_box
+game.guess_checker("t")
