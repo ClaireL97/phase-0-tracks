@@ -1,16 +1,17 @@
 class Word_Game
-attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters
+attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters, :guess_limit, :victory
 
 	def initialize(word)
 		puts "Initializing word game instance..."
 		@Word = word.upcase
 		@word_characters = word.upcase.split('')
-		@letter_index = {}
+		#@letter_index = {}
 		@Guess_list = []
 		@Answer = []
+		@victory = false
 		@guess_limit = @Word.length
 	end
-
+=begin 
 	def index_storage
 		index = 0
 		until index == @Word.length
@@ -20,7 +21,7 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters
 		end
 		@letter_index
 	end
-
+=end
 	def answer_box
 		length = 0
 		until length == @Word.length
@@ -39,23 +40,35 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters
 
 		elsif user_guess.upcase == @Word
 			puts "Nice job, the word was #{@Word}! You Win!"
-			guess_limit = 0
-			
+			@victory = true
+			@guess_limit = 0
+		
 		
 		elsif @word_characters.include?user_guess
 			@Guess_list.push(user_guess)
-			character_index = @word_characters.index(user_guess)
-			p character_index
-			@Answer[character_index] = user_guess
+
+			word_length = 0
+			until word_length == @word_characters.length
+				if user_guess == @word_characters[word_length]
+					@Answer[word_length] = user_guess
+				end
+				word_length += 1
+			end
 			p @Answer
 			@guess_limit -= 1
-			puts "You have #{@guess_limit} guesses left. Guess Again"
-
+			if @word_characters == @Answer
+				@victory = true
+				@guess_limit = 0
+			else
+				puts "You have #{@guess_limit} guesses left. Guess Again"
+			end
+			
+		
 		elsif !@word_characters.include?user_guess
 			puts "That is not in the word"
 			@Guess_list.push(user_guess)
 			p @Answer
-			#p @Guess_list
+			p @Guess_list
 			@guess_limit -= 1
 			puts "You have #{@guess_limit} guesses left"		
 
@@ -66,16 +79,28 @@ attr_accessor :Word, :guess, :Guess_list, :Answer, :word_characters
 end
 #Things to do
 		#Make program find all the index's for example in letter 2 t's and right now program only takes first one
-#game = Word_Game.new("Shelter")
- # game.guess_checker("SHELTER")
- # game.guess_checker("s")
- # game.guess_checker("t")
- # game.guess_checker("s")
+# game = Word_Game.new("Shelter")
 
-# puts "Lets begin the game. What word would you like to scrable?"
-# game = Word_Game.new(gets.chomp)
-# game.answer_box
-# game.index_storage
-# puts "Now then time to start guessing. Guess a letter or the word!"
+#   game.guess_checker("SHELTER")
+#   game.guess_checker("s")
+#   game.guess_checker("e")
+#   game.guess_checker("t")
+#   game.guess_checker("s")
+#   game.guess_checker("r")
+#   game.guess_checker("h")
+#   game.guess_checker("l")
 
-# game.guess_checker(gets.chomp)
+puts "Lets begin the game. What word would you like to have guessed?"
+game = Word_Game.new(gets.chomp)
+  game.answer_box
+
+ until game.guess_limit == 0
+ 	puts "Now then time to start guessing. Guess a letter or the word!"
+	game.guess_checker(gets.chomp)
+ end
+p game.victory
+if game.victory == false
+	puts "And you FAIIIL -.- The word was #{game.Word}"
+else
+	puts "YAY! You guessed #{game.Word} correctly! ^.^"
+end
