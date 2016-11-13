@@ -7,4 +7,9 @@ describe Word_Game do
     expect(word_game.answer_box).to eq ["_", "_", "_", "_", "_", "_", "_"]
   end
 
+ it "Takes a guess and tests to see if the letter S is in the word and if it is, puts it into the word." do
+ 	word_game.guess_checker("t")
+ 	expect(word_game.guess_checker). to eq ["_","_","_","_","T","_","_"]
+ end
+
 end
