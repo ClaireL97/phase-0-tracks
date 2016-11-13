@@ -5,6 +5,12 @@ class Word_Game
 		@word_characters = word.upcase.split('')
 		@Guess_list = []
 		@Answer = []
+		@guess_limit = 20
+	end
+
+	def get_Guess_list
+		p @Guess_list
+		@Guess_list
 	end
 
 	def answer_box
@@ -16,6 +22,6 @@ class Word_Game
 		p @Answer
 	end
 
-	 def guess_check(guess)
-	 end
+
+
 end
