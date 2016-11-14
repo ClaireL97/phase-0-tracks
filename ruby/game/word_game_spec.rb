@@ -11,7 +11,7 @@ describe Word_Game do
   	word_game.guess_checker("E")
   	expect(word_game.Answer).to eq ["_","_","E","_","_","E","_"]
   end
-  
+
  it "guesses the full word" do
  	word_game.guess_checker("shelter")
  	expect(word_game.Answer).to eq (word_game.Word)
@@ -21,6 +21,33 @@ describe Word_Game do
  	expect(word_game.guess_checker("M")). to eq ("You have #{word_game.guess_limit} guesses left")
  end
 
-
-
+ it "Runs out of guesses" do
+ 	word_game.guess_checker("C")
+ 	word_game.guess_checker("S")
+ 	word_game.guess_checker("A")
+ 	word_game.guess_checker("V")
+ 	word_game.guess_checker("N")
+ 	word_game.guess_checker("R")
+ 	word_game.guess_checker("T")
+ 	word_game.guess_checker("z")
+ 	expect(word_game.guess_checker("mew")). to eq ("Staaahp D: you're out of guesses!")
+ end
+ it "Wins but keeps guessing" do
+ 	word_game.guess_checker("S")
+ 	word_game.guess_checker("H")
+ 	word_game.guess_checker("E") 
+ 	word_game.guess_checker("L")
+ 	word_game.guess_checker("T")
+ 	word_game.guess_checker("R")
+ 	expect(word_game.guess_checker("mew")). to eq ("Staaahp D: you've already won!")
+ end
+ it "Guesses the word correctly letter by letter" do
+ 	word_game.guess_checker("S")
+ 	word_game.guess_checker("H")
+ 	word_game.guess_checker("E") 
+ 	word_game.guess_checker("L")
+ 	word_game.guess_checker("T")
+ 	word_game.guess_checker("R")
+ 	expect(word_game.victory). to eq (true)
+end
 end
