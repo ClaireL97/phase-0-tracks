@@ -102,18 +102,16 @@ end
 #   game.guess_checker("h")
 #   game.guess_checker("l")
 
-#User Interface
+# #User Interface
 
-# puts "Lets begin the game. What word would you like to have guessed?"
- # game = Word_Game.new(gets.chomp)
-
- #  until game.victory != nil
- #  	puts "Now then time to start guessing. Guess a letter or the word!"
- # 	game.guess_checker(gets.chomp)
- #  end
- # p game.victory
- # if game.victory == false
- #  	puts "And you FAIIIL -.- The word was #{game.Word}"
- # else
- # 	puts "YAY! You guessed #{game.Word} correctly! ^.^"
- # end
+#  puts "Lets begin the game. What word would you like to have guessed?"
+#   game = Word_Game.new(gets.chomp)
+#    until game.victory != nil
+#    	puts "Now then time to start guessing. Guess a letter or the word!"
+#   	game.guess_checker(gets.chomp)
+#    end
+#   if game.victory == false
+#    	puts "And you FAIIIL -.- The word was #{game.Word}"
+#   else
+#   	puts "YAY! You guessed #{game.Word} correctly! ^.^"
+#   end
