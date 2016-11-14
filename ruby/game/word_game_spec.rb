@@ -32,6 +32,7 @@ describe Word_Game do
  	word_game.guess_checker("z")
  	expect(word_game.guess_checker("mew")). to eq ("Staaahp D: you're out of guesses!")
  end
+
  it "Wins but keeps guessing" do
  	word_game.guess_checker("S")
  	word_game.guess_checker("H")
@@ -41,6 +42,7 @@ describe Word_Game do
  	word_game.guess_checker("R")
  	expect(word_game.guess_checker("mew")). to eq ("Staaahp D: you've already won!")
  end
+
  it "Guesses the word correctly letter by letter" do
  	word_game.guess_checker("S")
  	word_game.guess_checker("H")
@@ -50,4 +52,11 @@ describe Word_Game do
  	word_game.guess_checker("R")
  	expect(word_game.victory). to eq (true)
 end
+
+it "Duplicate guess" do
+ 	word_game.guess_checker("S")
+ 	word_game.guess_checker("S")
+ 	expect(word_game.Guess_list). to eq (["S"])
+end
+
 end
