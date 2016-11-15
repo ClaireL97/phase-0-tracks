@@ -4,7 +4,7 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# It is a built in method for ruby that allows the program to call upon information from the relative file that is specified.
 #
 require_relative 'state_data'
 
