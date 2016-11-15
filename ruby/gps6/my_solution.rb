@@ -1,6 +1,6 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself:Claire Lindblom, with: Yancy Zhang].
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
@@ -58,23 +58,24 @@ class VirusPredictor
 #The speed_of_spread metod takes the given state and uses the population density variable to determine what the speed of spread difference would be.
 #The speed is a variable in months and depending on the density, the speed is increased by a set value. Then the method prints out spread speed.
 
-  def speed_of_spread #(population_density, state)in months 
+  def speed_of_spread #(population_density, state)
     #I removed un-needed arguments to make it more DRY
 
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
+
+    #speed = 0.0 in months (commented this out cause not needed anymore) 
 
     if @population_density >= 200
-      speed += 0.5
+      speed = 0.5
     elsif @population_density >= 150
-      speed += 1
+      speed = 1
     elsif @population_density >= 100
-      speed += 1.5
+      speed = 1.5
     elsif @population_density >= 50
-      speed += 2
+      speed = 2
     else
-      speed += 2.5
+      speed = 2.5
     end
 
     puts " and will spread across the state in #{speed} months.\n\n"
