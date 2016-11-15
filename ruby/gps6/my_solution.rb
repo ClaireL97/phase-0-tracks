@@ -1,11 +1,11 @@
 # Virus Predictor
 
 # I worked on this challenge [by myself:Claire Lindblom, with: Yancy Zhang].
-# We spent [#] hours on this challenge.
+# We spent [3] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # It is a built in method for ruby that allows the program to call upon information from the relative file that is specified.
-# Both require and require_relative both load files. The difference is in the path they take to load the file. Require_relative goes to
+# Both require and require_relative both load files. The difference is in the path they take to load the file. Require_relative
 # goes to the specified location while require searches though a list of bash profile variables that lists location.
 
 require_relative 'state_data'
@@ -110,7 +110,7 @@ class VirusPredictor
 
     puts " and will spread across the state in #{speed} months.\n\n"
   end
-  
+
 end
 #=======================================================================
 
@@ -140,3 +140,31 @@ STATE_DATA.each do |state|
 
 #=======================================================================
 # Reflection Section
+=begin
+
+What are some differences between the two different hash syntaxes shown in the state_data file?
+  The difference was in the key syntax. The hashy hash (or biggest hash containing all the small hashes) was set equal to the
+  brackets with all the other hashes inside. The keys for the large hash were also the hash variable names for the small hashes.
+
+What does require_relative do? How is it different form require?(copying the response we talked about earlier in the program)
+  It is a built in method for ruby that allows the program to call upon information from the relative file that is specified.
+  Both require and require_relative both load files. The difference is in the path they take to load the file. Require_relative
+  goes to the specified location while require searches though a list of bash profile variables that lists location.
+
+What are some ways to iterate through a hash?
+  A few ways to iterate through a hash is a loop where the index goes up once each time and then until the index = the hash length, it
+  keeps going through and running the needed loop. The other way is the method I used. I used the built in method each to call each
+  part of the method and set it to the variable of state. Then I used state as seen on line 121
+
+When refactoring virus_effects, what stood out to you about the variables if anything?
+  It stood out to me that what was called was the two private methods and what they returned were the variables that were given at the end
+  of each of the methods. It also stood out to me that before I made the code more DRY, it kept calling the attributes each time when the
+  attributes didn't need to be called as arguments. I was able to simplify because I noticed this.
+
+What concept did you most solidify in this challenge?
+  This challenge there were actually two concepts I solidified and so picking one is hard. First was classes and how things can be run from
+  them. I had no idea about what it did before today and I found that very interesting. While that was a general review, the other thing 
+  that was solidified was what non-DRY code was and how I could edit the class and driver code to make it more DRY. This came from knowing how
+  class methods worked along with exactly what each part of my code did.
+
+=end
