@@ -5,7 +5,9 @@
 
 # EXPLANATION OF require_relative
 # It is a built in method for ruby that allows the program to call upon information from the relative file that is specified.
-#
+# Both require and require_relative both load files. The difference is in the path they take to load the file. Require_relative goes to
+# goes to the specified location while require searches though a list of bash profile variables that lists location.
+
 require_relative 'state_data'
 
 class VirusPredictor
