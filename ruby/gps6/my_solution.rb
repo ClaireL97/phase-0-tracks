@@ -39,17 +39,33 @@ class VirusPredictor
 
   def predicted_deaths #(population_density, population, state) removed un-needed arguments
     # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
-    end
+
+    #I used a case statement to edit number of deaths without setting it equal manually each time.
+    number_of_deaths = case 
+        when @population_density >= 200
+          (@population * 0.4).floor
+        when @population_density >= 150
+          (@population * 0.3).floor
+        when @population_density >= 100
+          (@population * 0.2).floor
+        when @population_density >= 50
+          (@population * 0.1).floor
+        else
+          (@population * 0.05).floor
+       end
+
+    #Original un-DRY code
+    # if @population_density >= 200
+    #   number_of_deaths = (@population * 0.4).floor
+    # elsif @population_density >= 150
+    #   number_of_deaths = (@population * 0.3).floor
+    # elsif @population_density >= 100
+    #   number_of_deaths = (@population * 0.2).floor
+    # elsif @population_density >= 50
+    #   number_of_deaths = (@population * 0.1).floor
+    # else
+    #   number_of_deaths = (@population * 0.05).floor
+    # end
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
@@ -66,24 +82,36 @@ class VirusPredictor
 
     #speed = 0.0 in months (commented this out cause not needed anymore) 
 
-    if @population_density >= 200
-      speed = 0.5
-    elsif @population_density >= 150
-      speed = 1
-    elsif @population_density >= 100
-      speed = 1.5
-    elsif @population_density >= 50
-      speed = 2
-    else
-      speed = 2.5
-    end
+    #After research I found case makes the code more DRY preventing need to type speed = (variable) each time
+      speed = case
+        when @population_density >= 200
+          0.5
+        when @population_density >= 150
+          1
+        when @population_density >= 100
+          1.5
+        when @population_density >= 50
+          2
+        else
+          2.5
+      end
+    #Original un-DRY code
+    # if @population_density >= 200
+    #   speed += 0.5
+    # elsif @population_density >= 150
+    #   speed += 1
+    # elsif @population_density >= 100
+    #   speed += 1.5
+    # elsif @population_density >= 50
+    #   speed += 2
+    # else
+    #   speed += 2.5
+    # end
 
     puts " and will spread across the state in #{speed} months.\n\n"
-
   end
-
+  
 end
-
 #=======================================================================
 
 # DRIVER CODE
@@ -93,10 +121,9 @@ STATE_DATA.each do |state|
   current_state = state[0]
   current_state = VirusPredictor.new(current_state,STATE_DATA[current_state][:population_density],STATE_DATA[current_state][:population])
   current_state.virus_effects
-end
+  end
 
-
-#Original Driver Code
+# #Original Driver Code
 # alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 # alabama.virus_effects
 
