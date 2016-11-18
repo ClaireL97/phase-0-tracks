@@ -5,16 +5,22 @@
 //get the index of that number
 //print value at index of words (which will end up being the longest one)
 
-var strings = ["long phrase","longest phrase","longer phrase"];
-var string_lengths = [];
-for (var i = 0; i < strings.length; i++) {
-	string_lengths.push(strings[i].length);
+var phrases = ["long phrase","longest phrase","longer phrase"];
+var fruit =["Apple","Iced Tea","Peanut Butter and Jelly","Honey"];
+
+
+function long_phrase_finder(array){
+	var string_lengths = [];
+	for (var i = 0; i < array.length; i++) {
+		string_lengths.push(array[i].length);
+	}
+	var max = Math.max.apply(Math,string_lengths);
+	//console.log(max);
+	var index = string_lengths.indexOf(max);
+	//console.log(index);
+	console.log(array[index]);
 }
-var max = Math.max.apply(Math,string_lengths);
-//console.log(max);
-var index = string_lengths.indexOf(max);
-//console.log(index);
-console.log(strings[index]);
+
 
 
 
