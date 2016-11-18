@@ -21,10 +21,23 @@ function long_phrase_finder(array){
 	console.log(array[index]);
 }
 
+//create two example objects with data inside of them
+//iterate though the keys
+//if both objects have the same key check the values
+//if the values are the same then set match to true
+//if none of them match then set match to false
 
 
+//write a function that takes interger for array length
+//create an empty array and set as variable
+//create a variable with all possible letters capital and lowercase in an array
+//make a loop that runs for number of array length
+//make that loop generate a random number between 1 and 10 for length of word
+//Math.floor((Math.random()*10)+1) returns a random number between 1 and 10
+//take one random letter from array for every character in length of word
+//note use letter = letterarray[Math.floor(Math.random() * favorites.length)];
 
 
-
-
-
+//Driver Code Area
+long_phrase_finder(fruit);
+long_phrase_finder(phrases);
