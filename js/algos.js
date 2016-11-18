@@ -36,8 +36,24 @@ function long_phrase_finder(array){
 //Math.floor((Math.random()*10)+1) returns a random number between 1 and 10
 //take one random letter from array for every character in length of word
 //note use letter = letterarray[Math.floor(Math.random() * favorites.length)];
+function random_word_gen(array_length){
+	var random_words = [];
+	var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+ 	for (i = 0; i < array_length; i++){
+ 		var word = "";
+ 		for (l = 0; l < Math.floor((Math.random()*10)+1); l++){
+ 			var letter = letters[Math.floor(Math.random() * letters.length)];
+ 			word += letter;
+ 		}
+	random_words.push(word);
+	}
+console.log(random_words)
+}
 
 
 //Driver Code Area
+random_word_gen(10)
+random_word_gen(4)
 long_phrase_finder(fruit);
 long_phrase_finder(phrases);
