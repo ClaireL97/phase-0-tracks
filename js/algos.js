@@ -49,11 +49,14 @@ function random_word_gen(array_length){
 	random_words.push(word);
 	}
 console.log(random_words)
+return random_words
+
 }
 
 
 //Driver Code Area
-random_word_gen(10)
-random_word_gen(4)
+//random_word_gen(10);
+//this next driver code combines the random_word_gen function with the long phrase finder
+long_phrase_finder(random_word_gen(10));
 long_phrase_finder(fruit);
 long_phrase_finder(phrases);
