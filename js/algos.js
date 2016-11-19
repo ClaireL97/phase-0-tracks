@@ -42,33 +42,29 @@ var person2 = {name: "Steven", age: 54};
 var car = {color:"red", brand: "ford"};
 var cat = {name: "Simon", fur: "Black", age:3};
 function match_check(obj1,obj2){
-	var match = null;
+	var match = false;
 	var keyset1 = Object.keys(obj1);
 	var keyset2 = Object.keys(obj2);
-	console.log(keyset1);
-	console.log(keyset2);
+	//console.log(keyset1);
+	//console.log(keyset2);
 	for (i = 0; i < keyset1.length; i++){
-		var key1 = keyset1[i]
-		var key2 = key2
-		for(i = 0; i <keyset2.length; i++){
-			key2 = keyset2[i]
-		if (key1 == key2){
-			match = true	
-		}
-		}
-	
+		var key1 = keyset1[i];
+		var key2 = key2;
 
-		console.log(match)
+		for(j = 0; j <keyset2.length; j++){
+			key2 = keyset2[j];
+			if (key1 == key2){
+				if (obj1[key1] == obj2[key2]){
+					match = true;
+				}
+			}
+		}
 	}
-
-
-
-
-
+console.log(match);
 return match
 }
 
-match_check(person1,cat)
+
 
 
 //write a function that takes interger for array length
@@ -101,5 +97,8 @@ return random_words
 //random_word_gen(10);
 //this next driver code combines the random_word_gen function with the long phrase finder
 long_phrase_finder(random_word_gen(10));
+match_check(person1,person2);
+match_check(person2,cat)
+
 long_phrase_finder(fruit);
 long_phrase_finder(phrases);
