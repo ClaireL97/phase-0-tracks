@@ -14,9 +14,18 @@ function long_phrase_finder(array){
 	for (var i = 0; i < array.length; i++) {
 		string_lengths.push(array[i].length);
 	}
-	var max = Math.max.apply(Math,string_lengths);
+	var max = 0;
+	var index = 0;
+	for (var l = 0; l < string_lengths.length; l++){
+		if (string_lengths[l] > max){
+			max = string_lengths[l];
+			index = l;
+		}
+	}
+	//console.log(index)
+	//var max = Math.max.apply(Math,string_lengths);
 	//console.log(max);
-	var index = string_lengths.indexOf(max);
+	//var index = string_lengths.indexOf(max);
 	//console.log(index);
 	console.log(array[index]);
 }
@@ -26,6 +35,17 @@ function long_phrase_finder(array){
 //if both objects have the same key check the values
 //if the values are the same then set match to true
 //if none of them match then set match to false
+var person1 = {name: "Tamir", age: 54};
+var person2 = {name: "Steven", age: 54};
+function match_check(obj1,obj2){
+	var match = null;
+
+
+
+
+return match
+}
+
 
 
 //write a function that takes interger for array length
@@ -48,7 +68,7 @@ function random_word_gen(array_length){
  		}
 	random_words.push(word);
 	}
-console.log(random_words)
+console.log(random_words);
 return random_words
 
 }
