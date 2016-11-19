@@ -22,6 +22,8 @@ function long_phrase_finder(array){
 			index = l;
 		}
 	}
+
+	//For my own research I looked up the built in methods that make it simpler
 	//console.log(index)
 	//var max = Math.max.apply(Math,string_lengths);
 	//console.log(max);
@@ -37,8 +39,28 @@ function long_phrase_finder(array){
 //if none of them match then set match to false
 var person1 = {name: "Tamir", age: 54};
 var person2 = {name: "Steven", age: 54};
+var car = {color:"red", brand: "ford"};
+var cat = {name: "Simon", fur: "Black", age:3};
 function match_check(obj1,obj2){
 	var match = null;
+	var keyset1 = Object.keys(obj1);
+	var keyset2 = Object.keys(obj2);
+	console.log(keyset1);
+	console.log(keyset2);
+	for (i = 0; i < keyset1.length; i++){
+		var key1 = keyset1[i]
+		var key2 = key2
+		for(i = 0; i <keyset2.length; i++){
+			key2 = keyset2[i]
+		if (key1 == key2){
+			match = true	
+		}
+		}
+	
+
+		console.log(match)
+	}
+
 
 
 
@@ -46,6 +68,7 @@ function match_check(obj1,obj2){
 return match
 }
 
+match_check(person1,cat)
 
 
 //write a function that takes interger for array length
