@@ -99,6 +99,5 @@ return random_words
 long_phrase_finder(random_word_gen(10));
 match_check(person1,person2);
 match_check(person2,cat)
-
 long_phrase_finder(fruit);
 long_phrase_finder(phrases);
