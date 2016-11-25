@@ -1,0 +1,40 @@
+
+1) join 3 tables
+select *
+  from businesses join reviews
+  on businesses.id = reviews.business_id
+  join users
+  on users.id = reviews.user_id;
+
+result:
+  1|Grundy Hollow Wedding Chapel|1|3|Great service terrible location|1|3|3|Angela|Jolie
+  3|Sushi World|2|5|Very fresh sashimi|3|3|3|Angela|Jolie
+  3|Sushi World|3|2|Tasted funky, staff was impatient|3|2|2|Mandy|Keling
+  1|Grundy Hollow Wedding Chapel|4|5|Location was excellent, very quiet and relaxing|1|2|2|Mandy|Keling
+  2|The Beagle Nightclub|5|5|Love the beagles here....so soft... yes....!|2|1|1|Bradford|Pitt
+
+2) joining 3 tables with only essential info:
+  select users.firstname, users.lastname, businesses.name, reviews.stars, reviews.comment
+  from users join reviews
+  on users.id = reviews.user_id
+  join businesses
+  on reviews.business_id = businesses.id;
+
+result:
+  Angela|Jolie|Grundy Hollow Wedding Chapel|3|Great service terrible location
+  Angela|Jolie|Sushi World|5|Very fresh sashimi
+  Mandy|Keling|Sushi World|2|Tasted funky, staff was impatient
+  Mandy|Keling|Grundy Hollow Wedding Chapel|5|Location was excellent, very quiet and relaxing
+  Bradford|Pitt|The Beagle Nightclub|5|Love the beagles here....so soft... yes....!
+
+
+3) all data for one business
+select *
+  from businesses join reviews
+  on businesses.id = 3 and reviews.business_id = 3
+  join users
+  on users.id = reviews.user_id;
+
+result:
+  3|Sushi World|2|5|Very fresh sashimi|3|3|3|Angela|Jolie
+  3|Sushi World|3|2|Tasted funky, staff was impatient|3|2|2|Mandy|Keling
