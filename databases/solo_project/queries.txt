@@ -1,0 +1,7 @@
+1) Display Information in one table
+	SELECT * FROM books;
+
+result: 1|Eragon|59|2
+		2|Eldest|71|2
+		3|The Chamber of Secrets|18|1
+		4|The Deathly Hallows|36|1
