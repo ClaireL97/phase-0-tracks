@@ -37,3 +37,10 @@ result: Eragon|59|Christopher Paolini
 
 
 5)Delete an item that meets some condition
+	DELETE FROM books WHERE title = "The Chamber of Secrets";
+
+result: 1|Eragon|59|2
+		2|Eldest|71|2
+		4|The Deathly Hallows|36|1
+		5|Brisinger|58|2
+
