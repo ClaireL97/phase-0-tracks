@@ -44,3 +44,31 @@ result: 1|Eragon|59|2
 		4|The Deathly Hallows|36|1
 		5|Brisinger|58|2
 
+
+Types of Joins:
+INNER JOIN: Returns all rows when there is at least one match in BOTH tables
+
+LEFT JOIN: Return all rows from the left table, and the matched rows from the right table
+
+RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table
+
+FULL JOIN: Return all rows when there is a match in ONE of the tables
+
+test stuff:
+	SELECT books.title, books.chapter_number,authors.name FROM books INNER JOIN authors ON authors.id = books.author_id;
+
+result: Eragon|59|Christopher Paolini
+		Eldest|71|Christopher Paolini
+		The Deathly Hallows|36|J.K. Rowling
+		Brisingr|58|Christopher Paolini
+
+	SELECT books.title, books.chapter_number,authors.name FROM books RIGHT JOIN authors ON authors.id = books.author_id;
+
+result : RIGHT and FULL OUTER JOINs are not currently supported
+
+	SELECT books.title, books.chapter_number,authors.name FROM books LEFT JOIN authors ON authors.id = books.author_id;
+
+result: Eragon|59|Christopher Paolini
+		Eldest|71|Christopher Paolini
+		The Deathly Hallows|36|J.K. Rowling
+		Brisingr|58|Christopher Paolini
