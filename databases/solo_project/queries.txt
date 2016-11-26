@@ -27,7 +27,13 @@ result: 1|Eragon|59|2|2|Christopher Paolini
 		5|Brisingr|58|2|2|Christopher Paolini
 
 4) Display a narrower selection of columns from both tables using one query
+	SELECT books.title, books.chapter_number,authors.name FROM books JOIN authors ON authors.id = books.author_id;
 
+result: Eragon|59|Christopher Paolini
+		Eldest|71|Christopher Paolini
+		The Chamber of Secrets|18|J.K Rowling
+		The Deathly Hallows|36|J.K. Rowling
+		Brisingr|58|Christopher Paolini
 
 
 5)Delete an item that meets some condition
