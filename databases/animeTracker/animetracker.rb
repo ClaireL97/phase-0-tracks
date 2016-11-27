@@ -18,12 +18,17 @@ def add_anime(db,title,total_episodes,current_episode)
 	db.execute("INSERT INTO animelist(title,total_episodes,current_episode) VALUES(?,?,?)", [title,total_episodes,current_episode])
 end
 
+def current_episode_update(db,title,updated_episode)
+	db.execute("UPDATE animelist SET current_episode=? WHERE title =?",[updated_episode,title])
 
-#creating data for the table (COMMENT THIS OUT AFTER DATA ADDED ONCE D:)
+
+end
+#creating data for the table (COMMENT THIS OUT AFTER DATA ADDED ONCE)
 # add_anime(db,"Mahou Shoujo Ikusei Keikaku",12,9)
 # add_anime(db,"Log Horizon",25,25)
 # add_anime(db,"Nanatsu no Taizai",24,24)
 # add_anime(db,"Shokugeki no Soma",24,24)
+current_episode_update(db,"Mahou Shoujo Ikusei Keikaku",12)
 
 
 #Data printing
