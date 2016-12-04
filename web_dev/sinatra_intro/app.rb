@@ -52,3 +52,12 @@ get'/contact' do
 	"To contact mail: 2441 42th Maple Ave. NE Array, TWA 78123! Or Call 200-2111-2041"
 end
 
+#Great Job route that takes a persons name as a query and says good job.
+get '/great_job' do
+	name = params[:name]
+	if name
+		"Good Job #{name}!!!"
+	else
+		"Good Job!!!"
+	end
+end
