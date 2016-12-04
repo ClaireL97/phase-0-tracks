@@ -1,6 +1,7 @@
 # require gems
 require 'sinatra'
 require 'sqlite3'
+require "sinatra/reloader" if development?
 
 db = SQLite3::Database.new("students.db")
 db.results_as_hash = true
@@ -44,3 +45,10 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+#Get Route that displays an address
+#note this is fake info
+get'/contact' do 
+	"To contact mail: 2441 42th Maple Ave. NE Array, TWA 78123! Or Call 200-2111-2041"
+end
+
